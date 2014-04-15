@@ -29,28 +29,15 @@
 
 describe('join', function(){
 
-	// it('should add the delimeter to the end of an array item.',function(){
-	// 	expect(join(["item"],", ")).toBe("item, ");
-	// });
-
 	it('should combine multiple array items with the delimeter between them, but not on the last item.', function(){
 
 		expect(join(["item1", "item2"], ", ")).toBe("item1, item2");
 	});
 
-	it('should return "No items to join" for an empty array', function(){
+	it('should return an empty string for an empty array', function(){
 
-		expect(join([], ", ")).toBe("No items to join");
+		expect(join([], ", ")).toBe("");
 	});
-
-	it('should work for all value types.', function(){
-
-		expect(join([1, 2, 3], ", ")).toBe("1, 2, 3");
-		expect(join([['a','b'],['c','d'],['e','f']], ", ")).toBe("[a,b], [c,d], [e,f]");
-		expect(join([['a','b'],2,['e','f']], ", ")).toBe("[a,b], 2, [e,f]");
-	});
-
-	// WHAT OTHER EDGE CASES ARE THERE?
 
 
 })

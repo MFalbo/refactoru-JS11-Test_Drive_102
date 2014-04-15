@@ -16,9 +16,6 @@
 var join = function(arr, delimeter) {
  var output = '';
 
- if(arr.length === 0){
-	  	output = "No items to join";
-	  }
 
 var strConstructor = function(value){
 
@@ -30,14 +27,9 @@ var strConstructor = function(value){
 	  }
 };
 
-// arr.map(strConstructor);
  for(var i=0; i<arr.length; i++) {
-	  // output += arr.length -1 ? arr[i] : arr[i] + delimeter;
-	  // output += arr[i] + delimeter;
 	  strConstructor(arr[i]);
  }
  return output;
 };
 
-var arrTest = [[1,2],[3,4],[5,6]];
-console.log(arrTest[0] + 'array index 0');
